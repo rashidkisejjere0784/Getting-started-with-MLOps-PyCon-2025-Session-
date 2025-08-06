@@ -73,15 +73,16 @@ Before running the project, you need to set up ZenML:
     ```bash
     export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
     ```
-    
+
     Then re-run the login command:
     ```bash
     zenml login --local
     ```
 
-3. **Start the ZenML server:**
+4. **Windows Users - Alternative if login fails:**
+    If the standard login command fails on Windows, try:
     ```bash
-    zenml up
+    zenml login --local --blocking
     ```
 
 ### Running the Pipeline
