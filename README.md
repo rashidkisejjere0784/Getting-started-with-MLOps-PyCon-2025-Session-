@@ -56,6 +56,36 @@ pip install uv
 
 ## Running the Project
 
+### Setting up ZenML
+
+Before running the project, you need to set up ZenML:
+
+1. **Initialize ZenML locally:**
+    ```bash
+    zenml login --local
+    ```
+    Follow the setup instructions that appear.
+
+2. **Mac Users - Fix potential error:**
+    If you encounter the error: `Error: The OBJC_DISABLE_INITIALIZE_FORK_SAFETY environment variable is recommended to run the ZenML server locally on a Mac. Please set it to YES and try again.`
+    
+    Run this command:
+    ```bash
+    export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+    ```
+    
+    Then re-run the login command:
+    ```bash
+    zenml login --local
+    ```
+
+3. **Start the ZenML server:**
+    ```bash
+    zenml up
+    ```
+
+### Running the Pipeline
+
 Execute the main MLOps pipeline:
 
 ```bash
